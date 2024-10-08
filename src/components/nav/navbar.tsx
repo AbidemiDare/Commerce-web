@@ -18,25 +18,6 @@ export const Navbar: React.FC = () => {
     setShow((prevState) => !prevState);
   };
 
-  const handleBackgroundChange = () => {
-    setChangeTheme(!changeTheme);
-  };
-
-  useEffect(() => {
-    if (changeTheme) {
-      document.body.style.backgroundColor = "#000000";
-      document.body.style.color = "#ffffff";
-    } else {
-      document.body.style.backgroundColor = "#ffffff";
-      document.body.style.color = "#000000";
-    }
-
-    return () => {
-      document.body.style.backgroundColor = "#ffffff";
-      document.body.style.color = "#000000";
-    };
-  });
-
   return (
     <>
       <nav className={style.nav}>
@@ -86,14 +67,6 @@ export const Navbar: React.FC = () => {
           </button>
 
           <div className={style.others}>
-            <button className={style.btnMode} onClick={handleBackgroundChange}>
-              {changeTheme ? (
-                <FaSun className={style.faSun} />
-              ) : (
-                <FaMoon className={style.faMoon} />
-              )}
-              <span className={style.toolTip}>dark mode</span>
-            </button>
             <div className={style.cart}>
               <FaShoppingCart />
               <span className={style.toolTip}>add to cart</span>
@@ -101,13 +74,15 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className={style.navBtnContainer}>
-            <button className={style.logBtn} onClick={showLogin}>Log in</button>
+            <button className={style.logBtn} onClick={showLogin}>
+              Log in
+            </button>
           </div>
         </div>
       </nav>
 
-      <Aside show={show} showMenu={showMenu}/>
-      <Login login={login} showLogin={showLogin}/>
+      <Aside show={show} showMenu={showMenu} />
+      <Login login={login} showLogin={showLogin} />
     </>
   );
 };

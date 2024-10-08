@@ -37,29 +37,13 @@ export function Product() {
             <h3>products</h3>
             <div className={style.underline}></div>
           </div>
-
-          <form action="" className={style.search}>
-            <input
-              type="text"
-              className={style.searchInput}
-              placeholder="search item..."
-            />
-            <button className={style.searchBtn}>
-              <span>
-                <FaSearch />
-              </span>
-            </button>
-          </form>
         </div>
 
         <div className={style.productCenter}>
           {products.length > 0 ? (
             products.map((product) => (
               <article className={style.product} key={product.id}>
-                <a
-                  className={style.productContainer}
-                  href="./product.html?id=${id}"
-                >
+                <a className={style.productContainer} href="">
                   <img
                     className={style.productImg}
                     src={product.image}

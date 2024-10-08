@@ -84,9 +84,9 @@ export default function Footer() {
 
         <div className={style.footerFooter}>
           <p>
-            <span className="copy">&copy;</span>{" "}
-            <span className="f-name">tfs</span>
-            <span className="date"></span>.
+            <span className={style.copy}>&copy;</span>{" "}
+            <span className={style.fName}>tfs</span>
+            <span className={style.date}></span>.
           </p>
         </div>
       </footer>
