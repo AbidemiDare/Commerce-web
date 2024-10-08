@@ -1,0 +1,94 @@
+.aside {
+  background: var(--primaryClr600);
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+  width: 0;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.showAside {
+  width: 100%;
+}
+
+.hidden {
+ width: 0;
+}
+
+.removeToggle {
+  cursor: pointer;
+  position: absolute;
+  top: 3%;
+  right: 7%;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--cherry-red);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.removeToggle:hover {
+  color: #ff0000;
+}
+
+.aside .asideCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.asideLinks a {
+  display: block;
+  padding: 0.7rem 0;
+  text-transform: capitalize;
+  color: var(--black);
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: var(--letter-spacing);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.asideLogBtn {
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  transform: translateX(50%);
+  -webkit-transform: translateX(50%);
+  -moz-transform: translateX(50%);
+  -ms-transform: translateX(50%);
+  -o-transform: translateX(50%);
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  background: red;
+  color: var(--white);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+.asideLogBtn:hover {
+  background: var(--black);
+}

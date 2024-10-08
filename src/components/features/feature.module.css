@@ -1,0 +1,167 @@
+.features {
+  background: var(--primaryClr600);
+  padding: 5rem 0;
+}
+
+.featuresTitle h3 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  color: var(--secondaryClr200);
+  color: #990011;
+}
+
+.featuresTitle p {
+  margin: 0;
+  color: var(--black);
+}
+
+.featuresCenter {
+  width: 90vw;
+  margin: 2rem auto;
+}
+
+.feature {
+  margin-bottom: 3rem;
+}
+
+.feature .img {
+  width: 100%;
+  height: 15rem;
+  display: block;
+  object-fit: cover;
+}
+
+.featureInfo h4 {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing);
+  color: var(--coral);
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.featureInfo span {
+  width: 2rem;
+  height: 2rem;
+  background: var(--primaryClr200);
+  background: var(--cherry-red);
+  font-weight: bold;
+  color: var(--black);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.featureInfo p {
+  color: var(--black);
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 578px) {
+  .featuresTitle {
+    margin-bottom: 4rem;
+  }
+
+  .featuresTitle h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.7rem;
+  }
+
+  .featuresTitle p {
+    margin: 0;
+    color: var(--black);
+    font-size: 1rem;
+  }
+
+  .featuresCenter {
+    width: 70vw;
+    margin: 3rem auto;
+  }
+
+  .feature {
+    margin-bottom: 4rem;
+  }
+
+  .featureInfo h4 {
+    font-size: 1.2rem;
+  }
+
+  .featureInfo span {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .featureInfo p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .featuresTitle {
+    width: 70vw;
+  }
+
+  .featuresTitle h3 {
+    font-size: 2rem;
+  }
+
+  .featuresCenter {
+    width: 90vw;
+  }
+
+  .feature .img {
+    height: 18rem;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+  }
+
+  .feature .img:hover {
+    opacity: 0.5;
+  }
+
+  .featureInfo h4 {
+    font-size: 1.3rem;
+  }
+
+  .featureInfo p {
+    font-size: 1rem;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .featuresCenter {
+    width: 80vw;
+  }
+
+  .feature {
+    gap: 5rem;
+  }
+
+  .featureInfo h4 {
+    font-size: 1.5rem;
+  }
+
+  .featureInfo p {
+    font-size: 1.1rem;
+  }
+
+  .featureInfo span {
+    width: 3rem;
+    height: 3rem;
+  }
+}
