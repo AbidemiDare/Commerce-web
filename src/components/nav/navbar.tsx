@@ -3,10 +3,16 @@ import style from "./navbar.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import Aside from "../aside/aside";
+import Login from "../../auth/login/login";
 
 export const Navbar: React.FC = () => {
   const [changeTheme, setChangeTheme] = useState(false);
   const [show, setShow] = useState(false);
+  const [login, setLogin] = useState(false);
+
+  const showLogin = () => {
+    setLogin(!login);
+  };
 
   const showMenu = (): void => {
     setShow((prevState) => !prevState);
@@ -95,12 +101,13 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className={style.navBtnContainer}>
-            <button className={style.logBtn}>Log in</button>
+            <button className={style.logBtn} onClick={showLogin}>Log in</button>
           </div>
         </div>
       </nav>
 
-      <Aside show={show} />
+      <Aside show={show} showMenu={showMenu}/>
+      <Login login={login} showLogin={showLogin}/>
     </>
   );
 };

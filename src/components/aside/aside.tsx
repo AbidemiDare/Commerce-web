@@ -1,27 +1,17 @@
 import { FaXmark } from "react-icons/fa6";
 import style from "./aside.module.css";
-import { useState } from "react";
 
 interface navProps {
   show?: boolean;
+  showMenu?: VoidFunction;
 }
 
-export default function Aside({ show }: navProps) {
-  const [aside, setAside] = useState(false);
-
-  const removeAside = () => {
-    setAside(!aside);
-  };
-
+export default function Aside({ show, showMenu }: navProps) {
   return (
     <div>
-      <aside
-        className={`${style.aside} ${show ? style.showAside : " "} ${
-          aside ? style.hidden : " "
-        }`}
-      >
+      <aside className={`${style.aside} ${show ? style.showAside : " "}`}>
         <button className={style.removeToggle}>
-          <span onClick={removeAside}>
+          <span onClick={showMenu}>
             <FaXmark />
           </span>
         </button>

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./product.module.css";
 import { FaHeart } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
 
 interface Product {
   id: number;
@@ -11,7 +12,7 @@ interface Product {
   category: string;
 }
 
-export const Product: React.FC<Product> = () => {
+export function Product() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -29,11 +30,29 @@ export const Product: React.FC<Product> = () => {
   }, []);
 
   return (
-    <div>
-      <div className={style.products}>
-        <h2>products</h2>
+    <>
+      <section className={style.products} id="products">
+        <div className={style.sectionCenter}>
+          <div className={`${style.sectionTitle} ${style.productsTitle}`}>
+            <h3>products</h3>
+            <div className={style.underline}></div>
+          </div>
 
-        <div className={style.productsContainer}>
+          <form action="" className={style.search}>
+            <input
+              type="text"
+              className={style.searchInput}
+              placeholder="search item..."
+            />
+            <button className={style.searchBtn}>
+              <span>
+                <FaSearch />
+              </span>
+            </button>
+          </form>
+        </div>
+
+        <div className={style.productCenter}>
           {products.length > 0 ? (
             products.map((product) => (
               <article className={style.product} key={product.id}>
@@ -64,7 +83,7 @@ export const Product: React.FC<Product> = () => {
             <p>Loading...</p>
           )}
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
-};
+}

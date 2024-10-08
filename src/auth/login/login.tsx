@@ -1,24 +1,28 @@
-import { FaEnvelope, FaUser, FaXmark } from "react-icons/fa6";
+import { FaEnvelope, FaLock, FaXmark } from "react-icons/fa6";
 import style from "./logn.module.css";
 
-export default function Login() {
+interface Login {
+  login: boolean;
+  showLogin?: VoidFunction;
+}
+
+export default function Login({ login, showLogin }: Login) {
   return (
     <div>
       <div className={style.formData}>
-        <form action="" className={style.form}>
-          <button className={style.removeForm}>
+        <form
+          action=""
+          className={`${style.form} ${login ? style.showModal : " "}`}
+        >
+          <button className={style.removeForm} onClick={showLogin}>
             <FaXmark />
           </button>
 
-          <span>
-            <FaUser />
-          </span>
+          <h3 className={style.formHeader}>welcome</h3>
 
-          <h3 id="form-header">welcome</h3>
-
-          <div className="form-column">
-            <label htmlFor="email" className="form-label">
-              <FaEnvelope /> email:
+          <div className={style.formColumn}>
+            <label htmlFor="email" className={style.formLabel}>
+              <FaEnvelope className={style.formIcon} /> email:
             </label>
             <input
               type="email"
@@ -28,9 +32,10 @@ export default function Login() {
             />
           </div>
 
-          <div className="form-column">
-            <label htmlFor="pword" className="form-label">
-              <i className="fa-solid fa-lock"></i> password:
+          <div className={style.formColumn}>
+            <label htmlFor="pword" className={style.formLabel}>
+              <FaLock className={style.formIcon} />
+              password:
             </label>
             <input
               type="password"
@@ -40,9 +45,9 @@ export default function Login() {
             />
           </div>
 
-          <button className="form-btn">Log in</button>
+          <button className={style.formBtn}>Log in</button>
 
-          <div className="sign-up">
+          <div className={style.signUp}>
             <h4>Want to create an account?</h4>
             <h3>
               <a href="#">sign up</a>
