@@ -86,7 +86,7 @@ export default function Footer() {
           <p>
             <span className={style.copy}>&copy;</span>{" "}
             <span className={style.fName}>tfs</span>
-            <span className={style.date}></span>.
+            <span className={style.date}>2022</span>.
           </p>
         </div>
       </footer>

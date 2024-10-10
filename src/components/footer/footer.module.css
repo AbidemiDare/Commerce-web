@@ -45,7 +45,7 @@
   place-items: center;
 }
 
-.footer-icon:hover {
+.footerIcon:hover {
   opacity: 0.5;
 }
 
@@ -103,10 +103,10 @@
   color: var(--white);
   padding: 0.3rem 1rem;
   transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
 }
 
 .footerForm .footerBtn:hover {
@@ -129,7 +129,7 @@
   font-weight: bold;
 }
 
-.footerFooter p .f-name {
+.footerFooter p .fName {
   color: wheat;
   font-size: 1.3rem;
   font-weight: bold;
@@ -181,7 +181,7 @@
     font-size: 1.7rem;
   }
 
-  .footerFooter p .f-name {
+  .footerFooter p .fName {
     color: var(--coral);
     font-size: 1.6rem;
     font-weight: bold;
