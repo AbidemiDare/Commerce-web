@@ -66,12 +66,10 @@ export const Navbar: React.FC = () => {
             </h3>
           </button>
 
-          <div className={style.others}>
             <div className={style.cart}>
               <FaShoppingCart />
               <span className={style.toolTip}>add to cart</span>
             </div>
-          </div>
 
           <div className={style.navBtnContainer}>
             <button className={style.logBtn} onClick={showLogin}>
