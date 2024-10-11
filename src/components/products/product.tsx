@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import style from "./product.module.css";
 import { FaHeart } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
 
 interface Product {
   id: number;
@@ -43,7 +42,7 @@ export function Product() {
           {products.length > 0 ? (
             products.map((product) => (
               <article className={style.product} key={product.id}>
-                <a className={style.productContainer} href="">
+                <div className={style.productContainer}>
                   <img
                     className={style.productImg}
                     src={product.image}
@@ -52,7 +51,7 @@ export function Product() {
                   <span>
                     <FaHeart />
                   </span>
-                </a>
+                </div>
                 <div className={style.productInfo}>
                   <h4 className={style.title}>{product.title}</h4>
                   <h3 className={style.category}>{product.category}</h3>
