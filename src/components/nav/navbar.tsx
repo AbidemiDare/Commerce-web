@@ -1,12 +1,11 @@
-import { FaCaretDown, FaMoon, FaSun } from "react-icons/fa6";
+import { FaCaretDown } from "react-icons/fa6";
 import style from "./navbar.module.css";
 import { FaShoppingCart } from "react-icons/fa";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Aside from "../aside/aside";
 import Login from "../../auth/login/login";
 
 export const Navbar: React.FC = () => {
-  const [changeTheme, setChangeTheme] = useState(false);
   const [show, setShow] = useState(false);
   const [login, setLogin] = useState(false);
 
@@ -66,10 +65,10 @@ export const Navbar: React.FC = () => {
             </h3>
           </button>
 
-            <div className={style.cart}>
-              <FaShoppingCart />
-              <span className={style.toolTip}>add to cart</span>
-            </div>
+          <div className={style.cart}>
+            <FaShoppingCart />
+            <span className={style.toolTip}>add to cart</span>
+          </div>
 
           <div className={style.navBtnContainer}>
             <button className={style.logBtn} onClick={showLogin}>
